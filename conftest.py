@@ -19,8 +19,8 @@ def driver(request):
     test_name = request.node.name
     build = environ.get('BUILD', "Sample PY Build")
     tunnel_id = environ.get('TUNNEL', False)
-    username = environ.get('LT_USERNAME', None)
-    access_key = environ.get('LT_ACCESS_KEY', None)
+    username = environ.get('LT_USERNAME', rosamz)
+    access_key = environ.get('LT_ACCESS_KEY', En5suBsCkoaweWNmzaGEkCTfmnhQSz7ahL0stnX78eXscYjTCZ)
 
     selenium_endpoint = "http://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key)
     desired_caps['build'] = build
